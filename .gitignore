@@ -1,0 +1,31 @@
+# Dependências, build e cache
+node_modules/
+dist/
+.vite/
+.vercel/
+playwright/.cache/
+# Logs e resultados temporários
+*.log
+npm-debug.log*
+test-results/
+# Configuração local e credenciais
+.env
+.env.*
+!.env.example
+# Artefatos de recuperação não pertencem ao repositório
+*.bak
+*.bak-*
+*.backup-*
+*.zip
+# Sistema operacional / editor
+.DS_Store
+Thumbs.db
+
+# Auditorias locais (cada execucao cria dezenas de arquivos)
+lighthouse-report/
+# Backups e arquivos temporarios
+*.tsbuildinfo
+*backup*
+*.bak2
+*.bak3
+README-ANTES-DEPLOY.md

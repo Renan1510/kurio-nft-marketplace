@@ -1,0 +1,6 @@
+import type {ReactNode,ComponentProps} from 'react'
+import * as DialogPrimitive from '@radix-ui/react-dialog'
+import {X} from 'lucide-react'
+export const Dialog=DialogPrimitive.Root
+export const DialogTrigger=DialogPrimitive.Trigger
+export function DialogContent({title,children,onCloseAutoFocus}:{title:string;children:ReactNode;onCloseAutoFocus?:ComponentProps<typeof DialogPrimitive.Content>['onCloseAutoFocus']}){return <DialogPrimitive.Portal><DialogPrimitive.Overlay className="fixed inset-0 z-50 bg-black/80"/><DialogPrimitive.Content onCloseAutoFocus={onCloseAutoFocus} className="fixed left-1/2 top-1/2 z-50 w-[min(92vw,500px)] max-h-[90vh] overflow-y-auto -translate-x-1/2 -translate-y-1/2 bg-panel border border-stroke p-6 shadow-2xl"><div className="flex items-center justify-between mb-5"><DialogPrimitive.Title className="text-xl font-bold">{title}</DialogPrimitive.Title><DialogPrimitive.Close aria-label="Fechar" className="focus-visible:outline focus-visible:outline-accent"><X/></DialogPrimitive.Close></div><DialogPrimitive.Description className="sr-only">Revise as informações desta janela.</DialogPrimitive.Description>{children}</DialogPrimitive.Content></DialogPrimitive.Portal>}

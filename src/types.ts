@@ -1,0 +1,14 @@
+export type Network = 'Ethereum' | 'Polygon' | 'Base'
+export type Category = 'Arte' | '3D' | 'Fotografia' | 'Música'
+export type NFT = {editionGroup?:string;editionName?:string;editions?:{id:string;label:string;available:number}[];id:string; title:string; creator:string; collection:string; category:Category; network:Network; image:string; price:string; available:number; total:number; version:number; featured?:boolean; description:string}
+export type User = {id:string; name:string; email:string; bio:string; avatar:string; version:number}
+export type Wallet = {id:string; label:string; address:string; network:Network; primary:boolean}
+export type CartItem = {nftId:string; quantity:number}
+export type CartResponse = {items:CartItem[]}
+export type QuoteItem = {nft:NFT; quantity:number; unitPrice:string; lineTotal:string}
+export type Quote = {items:QuoteItem[]; subtotal:string; discount:string; networkFee:string; total:string; coupon:string; network:Network; fingerprint:string; valid:boolean; reasons:string[]}
+export type Order = {id:string; userId:string; status:'pending'|'confirmed'|'declined'; quote:Quote; walletId:string; collector?:{name:string;email:string}; reference:string; createdAt:string; version:number; resolveAt:number; outcome:'confirmed'|'declined'}
+export type PagedNFTs = {items:NFT[]; total:number; page:number; pages:number}
+export type CatalogSearch = {q:string; category:string; network:string; sort:string; page:number}
+export type Scenario = 'default'|'slow'|'server-error'|'offline'|'expired-session'|'price-change'|'declined-payment'|'timeout-after-create'|'duplicate-events'|'out-of-order'|'mutation-error'|'wallet-refusal'|'empty'|'client-error'|'variable-latency'|'sold-out'
+export type RealtimeEvent<T> = {eventId:string;resourceId:string; version:number; data:T; userId?:string}

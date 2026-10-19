@@ -1,0 +1,11 @@
+import type {ReactNode} from 'react'
+import {Link} from '@tanstack/react-router'
+import {Heart} from 'lucide-react'
+import {eth} from '../lib/money'
+import type {NFT} from '../types'
+import {Button} from './ui/button'
+export function Skeleton({className=''}:{className?:string}){return <div aria-hidden="true" className={`skeleton ${className}`}/>}
+export function Notice({children,type='warning'}:{children:ReactNode;type?:'warning'|'error'|'success'}){return <div role={type==='error'?'alert':'status'} className={`notice ${type}`}>{children}</div>}
+export function SectionTitle({title,description}:{title:string;description?:string}){return <div className="mb-5"><h2 className="font-bold text-2xl">{title}</h2>{description&&<p className="text-soft mt-2">{description}</p>}</div>}
+export function NFTCard({nft,faved,onFavorite}:{nft:NFT;faved?:boolean;onFavorite?:(id:string)=>void}){return <article className="nft-card group"><Link to="/nft/$id" params={{id:nft.id}} className="block"><div className="aspect-square overflow-hidden rounded-[11px] bg-[#39251f]"><img className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.04]" src={nft.image.startsWith('/art/')?nft.image.replace('/art/','/art/thumbs/'):nft.image} loading="lazy" decoding="async" fetchPriority="low" width={360} height={360} alt={`Arte digital ${nft.title}`}/></div><div className="pt-3"><h3 className="font-semibold text-[15px] group-hover:text-accent transition-colors">{nft.title}</h3><p className="text-accent font-bold text-sm mt-1">{eth(nft.price)}</p></div></Link>{onFavorite&&<button onClick={()=>onFavorite(nft.id)} title="Alternar favorito" aria-label={faved?'Remover dos favoritos':'Salvar como favorito'} className="absolute right-4 top-4 bg-black/60 p-2 rounded-full text-white hover:text-accent"><Heart className="h-4 w-4" fill={faved?'currentColor':'none'}/></button>}</article>}
+export function EmptyState({title,body,to='/',action='Voltar ao início'}:{title:string;body:string;to?:string;action?:string}){return <div className="min-h-56 flex flex-col justify-center items-center text-center gap-4 border border-stroke p-7"><h2 className="text-xl font-bold">{title}</h2><p className="text-soft">{body}</p><Button asChild><Link to={to}>{action}</Link></Button></div>}
