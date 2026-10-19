@@ -1,0 +1,214 @@
+{
+  "generatedAt": "2026-10-19T00:27:17.825Z",
+  "node": "v24.15.0",
+  "platform": "win32",
+  "lighthouse": "12.8.2",
+  "baseURL": "http://127.0.0.1:4173",
+  "configuration": "Production Vite preview, default MSW, mobile simulated throttling / desktop preset, three fresh Chrome runs per page/profile",
+  "results": [
+    {
+      "page": "home",
+      "profile": "mobile",
+      "count": 3,
+      "measurements": [
+        {
+          "performance": 92,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 2968.0580999999997,
+          "CLS": 0,
+          "TBT": 34.5
+        },
+        {
+          "performance": 85,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 3516.0154,
+          "CLS": 0.01784038804864688,
+          "TBT": 65
+        },
+        {
+          "performance": 92,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 2960.56695,
+          "CLS": 0,
+          "TBT": 33
+        }
+      ],
+      "medians": {
+        "performance": 92,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "LCP": 2968.0580999999997,
+        "CLS": 0,
+        "TBT": 34.5
+      },
+      "officialPassed": true,
+      "targets": {
+        "performance": 97,
+        "accessibility": 97,
+        "bestPractices": 97,
+        "seo": 97
+      },
+      "passed": false
+    },
+    {
+      "page": "home",
+      "profile": "desktop",
+      "count": 3,
+      "measurements": [
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 846.4606,
+          "CLS": 0.001570573538993065,
+          "TBT": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 821.7504000000001,
+          "CLS": 0.001570573538993065,
+          "TBT": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 823.2282,
+          "CLS": 0.001570573538993065,
+          "TBT": 0
+        }
+      ],
+      "medians": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "LCP": 823.2282,
+        "CLS": 0.001570573538993065,
+        "TBT": 0
+      },
+      "officialPassed": true,
+      "targets": {
+        "performance": 97,
+        "accessibility": 97,
+        "bestPractices": 97,
+        "seo": 97
+      },
+      "passed": true
+    },
+    {
+      "page": "nft/emerald",
+      "profile": "mobile",
+      "count": 3,
+      "measurements": [
+        {
+          "performance": 89,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 3331.7143750000005,
+          "CLS": 0,
+          "TBT": 29
+        },
+        {
+          "performance": 92,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 2961.1812,
+          "CLS": 0,
+          "TBT": 25.5
+        },
+        {
+          "performance": 91,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 3033.5047000000004,
+          "CLS": 0,
+          "TBT": 25
+        }
+      ],
+      "medians": {
+        "performance": 91,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "LCP": 3033.5047000000004,
+        "CLS": 0,
+        "TBT": 25.5
+      },
+      "officialPassed": true,
+      "targets": {
+        "performance": 97,
+        "accessibility": 97,
+        "bestPractices": 97,
+        "seo": 97
+      },
+      "passed": false
+    },
+    {
+      "page": "nft/emerald",
+      "profile": "desktop",
+      "count": 3,
+      "measurements": [
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 846.5514,
+          "CLS": 0.003727110699839401,
+          "TBT": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 836.4567999999999,
+          "CLS": 0.003727110699839401,
+          "TBT": 0
+        },
+        {
+          "performance": 99,
+          "accessibility": 100,
+          "bestPractices": 100,
+          "seo": 100,
+          "LCP": 880.344,
+          "CLS": 0.003727110699839401,
+          "TBT": 0
+        }
+      ],
+      "medians": {
+        "performance": 99,
+        "accessibility": 100,
+        "bestPractices": 100,
+        "seo": 100,
+        "LCP": 846.5514,
+        "CLS": 0.003727110699839401,
+        "TBT": 0
+      },
+      "officialPassed": true,
+      "targets": {
+        "performance": 97,
+        "accessibility": 97,
+        "bestPractices": 97,
+        "seo": 97
+      },
+      "passed": true
+    }
+  ]
+}
